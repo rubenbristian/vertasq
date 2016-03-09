@@ -1,0 +1,281 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background: #eaeaea; }
+
+input, button {
+  outline: none; }
+
+.vertasq {
+  font-family: Montserrat;
+  line-height: 1;
+  padding: 15px; }
+  .vertasq .list {
+    display: block;
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    float: left;
+    margin: 15px;
+    padding: 0; }
+    .vertasq .list h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 25px;
+      border-bottom: 1px solid #e9e9e9;
+      position: relative; }
+    .vertasq .list ul {
+      padding: 10px 25px; }
+    .vertasq .list .item {
+      list-style: none;
+      margin: 15px 0;
+      padding: 5px 0 5px 25px;
+      position: relative;
+      cursor: default; }
+      .vertasq .list .item h3 {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #3c3d41;
+        width: 60%; }
+        .vertasq .list .item h3:first-letter {
+          text-transform: uppercase; }
+        .vertasq .list .item h3 a {
+          color: #000;
+          text-decoration: none;
+          background: #e9e9e9;
+          cursor: pointer; }
+      .vertasq .list .item.blank h3 {
+        color: #999;
+        margin-left: -25px; }
+      .vertasq .list .item .meta {
+        position: absolute;
+        top: 1px;
+        right: -3px;
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 3px 3px 2px;
+        border-radius: 2px; }
+        .vertasq .list .item .meta span {
+          display: inline-block;
+          font-size: 10px;
+          text-transform: uppercase;
+          color: #fff;
+          padding: 3px 3px 2px;
+          border-radius: 2px;
+          margin: 0 3px;
+          position: relative; }
+          .vertasq .list .item .meta span.type[data-type="bug"] {
+            background: #ff6666; }
+          .vertasq .list .item .meta span.type[data-type="feature"] {
+            background: #8fd896; }
+          .vertasq .list .item .meta span.type[data-type="improvement"] {
+            background: #8fc4d8; }
+          .vertasq .list .item .meta span.version {
+            background: #d8c08f; }
+        .vertasq .list .item .meta select, .vertasq .list .item .meta input {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          cursor: pointer; }
+        .vertasq .list .item .meta input {
+          opacity: 0;
+          top: 2px;
+          left: 2px;
+          width: calc(100% - 6px);
+          height: calc(100% - 6px);
+          border: none;
+          background: #fff;
+          border-radius: 2px;
+          text-align: center;
+          cursor: normal; }
+          .vertasq .list .item .meta input.visible {
+            opacity: 1; }
+      .vertasq .list .item .check {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        -webkit-appearance: none;
+        border-radius: 100%;
+        border: 1px solid #e9e9e9;
+        width: 15px;
+        height: 15px;
+        background: #fff;
+        font-size: 0;
+        cursor: pointer; }
+        .vertasq .list .item .check:checked {
+          background: #2a77ed;
+          border-color: transparent; }
+      .vertasq .list .item[data-checked="true"] {
+        opacity: 0.5;
+        display: none; }
+    .vertasq .list .toggle-checked {
+      border: 2px solid #e9e9e9;
+      font-family: Montserrat;
+      font-size: 10px;
+      color: #cacaca;
+      background: transparent;
+      border-radius: 3px;
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      margin: 0px 25px 20px;
+      opacity: .8;
+      cursor: pointer; }
+    .vertasq .list ul.show-checked .item[data-checked="true"] {
+      display: block; }
+  .vertasq .item-form {
+    padding: 25px;
+    border-top: 1px solid #e9e9e9;
+    position: relative; }
+    .vertasq .item-form input[type="text"] {
+      border: none;
+      font-family: Montserrat;
+      font-size: 14px;
+      color: #666;
+      width: 200px; }
+      .vertasq .item-form input[type="text"]::-webkit-input-placeholder {
+        color: #ccc; }
+    .vertasq .item-form input.version {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 4px 3px 2px;
+      border-radius: 2px;
+      width: 20px;
+      display: inline-block;
+      text-align: center;
+      height: 17px;
+      position: relative;
+      top: 0;
+      margin-left: 15px;
+      background: #d8c08f; }
+      .vertasq .item-form input.version::-webkit-input-placeholder {
+        color: #fff; }
+    .vertasq .item-form input[type="radio"] {
+      -webkit-appearance: none; }
+      .vertasq .item-form input[type="radio"] + span {
+        font-size: 10px;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 5px 3px 2px;
+        border-radius: 2px;
+        border: 2px solid;
+        width: 10px;
+        display: inline-block;
+        text-align: center;
+        height: 12px;
+        position: relative;
+        top: -1px;
+        cursor: pointer; }
+        .vertasq .item-form input[type="radio"] + span.bug {
+          border-color: #ff6666;
+          color: #ff6666; }
+        .vertasq .item-form input[type="radio"] + span.feature {
+          border-color: #8fd896;
+          color: #8fd896; }
+        .vertasq .item-form input[type="radio"] + span.improvement {
+          border-color: #8fc4d8;
+          color: #8fc4d8; }
+      .vertasq .item-form input[type="radio"]:checked + span {
+        color: #fff;
+        border-color: transparent; }
+        .vertasq .item-form input[type="radio"]:checked + span.bug {
+          background: #ff6666; }
+        .vertasq .item-form input[type="radio"]:checked + span.feature {
+          background: #8fd896; }
+        .vertasq .item-form input[type="radio"]:checked + span.improvement {
+          background: #8fc4d8; }
+  .vertasq .list-form {
+    position: fixed;
+    width: 250px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #dcdada; }
+    .vertasq .list-form input {
+      border: none;
+      font-family: Montserrat;
+      font-size: 14px;
+      line-height: 50px;
+      color: #666;
+      width: 200px;
+      background: transparent;
+      padding: 0 20px; }
+      .vertasq .list-form input::-webkit-input-placeholder {
+        color: #ccc; }
+    .vertasq .list-form button.circleButton {
+      top: 10px;
+      right: 10px;
+      border: none; }
+  .vertasq button.circleButton {
+    font-family: Arial;
+    background: #fff;
+    color: #666;
+    font-size: 0;
+    border: 1px solid #e9e9e9;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    line-height: 1;
+    cursor: pointer; }
+    .vertasq button.circleButton:after, .vertasq button.circleButton:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1px;
+      height: 11px;
+      margin-top: -5px;
+      background: #d4cfcf; }
+    .vertasq button.circleButton:before {
+      width: 11px;
+      height: 1px;
+      margin-top: 0;
+      margin-left: -5px; }
+    .vertasq button.circleButton.cross {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
